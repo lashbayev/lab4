@@ -1,0 +1,5 @@
+height = float(input())
+base_first = float(input())
+base_second = float(input())
+area = 0.5 * height * (base_first + base_second)
+print(area)
