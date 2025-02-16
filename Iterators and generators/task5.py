@@ -1,20 +1,10 @@
-N = int(input())
+def countdown(n):
+    for i in range(n, -1, -1): 
+        yield i
 
-class Squarednumbers:
-    def __iter__(self):
-        self.a = 1  
-        return self
 
-    def __next__(self):
-        if self.a <= N:
-            x = self.a ** 2  
-            self.a += 1
-            return x
-        else:
-            raise StopIteration
+n = int(input("Enter a number: "))
 
-myclass = Squarednumbers()
-myit = iter(myclass)
-
-for num in myit:
+print(f"Countdown from {n} to 0:")
+for num in countdown(n):
     print(num)
